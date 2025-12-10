@@ -1,0 +1,47 @@
+/* FAQ specific styles, aligned with global design */
+
+.ws-faq .faq-list {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.faq-item {
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: var(--border-radius-lg);
+  background-color: var(--color-white);
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: var(--spacing-md);
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-arrow {
+  transition: all 0.3s ease;
+}
+
+.faq-question.active .faq-arrow {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  padding: 0 var(--spacing-md);
+}
+
+.faq-answer.open {
+  padding: var(--spacing-md);
+  max-height: 200px; /* enough for short answers */
+}

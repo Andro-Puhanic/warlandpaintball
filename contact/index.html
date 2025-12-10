@@ -2,10 +2,10 @@
 <html lang="hr">
 <head>
   <meta charset="UTF-8" />
-  <title>Warland Paintball – Gel Blaster</title>
+  <title>Kontakt i rezervacije - Warland Paintball</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Gel Blaster akcija za djecu i ekipe. Rezerviraj termin za rođendane, zabave ili teambuilding." />
-  <!-- iz gel-blaster/ do assets/ -->
+  <meta name="description" content="Kontakt forma i podaci za rezervaciju paintball i gel blaster termina." />
+  <!-- iz /contact/ do /assets/ -->
   <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
 <body>
@@ -13,8 +13,9 @@
   <!-- Header / Navigation -->
   <header class="ws-nav ws-nav--sticky">
     <div class="ws-nav__inner">
+      <!-- iz /contact/ do /paintball/ -->
       <a href="../paintball/" class="ws-nav__logo">
-        <span class="ws-nav__logo-main">Warland Paintball</span>
+        <span class="ws-nav__logo-main">Warland paintball<span class="ws-nav__logo-dot"></span></span>
       </a>
 
       <button class="ws-nav__toggle" aria-label="Otvori navigaciju" aria-expanded="false">
@@ -24,214 +25,108 @@
       <nav class="ws-nav__menu" aria-label="Glavna navigacija">
         <ul>
           <li><a href="../paintball/">Paintball</a></li>
-          <li><a href="./">Gel Blaster</a></li>
-          <li><a href="../contact/">Kontakt</a></li>
+          <li><a href="../gel-blaster/">Gel Blaster</a></li>
+          <li><a href="./">Kontakt</a></li>
           <li><a href="../faq/">FAQ</a></li>
         </ul>
       </nav>
 
-      <a href="../contact/" class="ws-btn ws-btn--primary ws-nav__cta">
+      <a href="./" class="ws-btn ws-btn--primary ws-nav__cta">
         Rezerviraj termin
       </a>
     </div>
   </header>
 
   <main>
-    <!-- HERO -->
-    <section id="hero-1" class="ws-hero ws-hero--home" aria-labelledby="hero-heading">
-      <div class="ws-container ws-hero__content">
-        <div class="ws-hero__text">
-          <p class="ws-eyebrow">Gel Blaster</p>
-          <h1 id="hero-heading">Najzabavnija i najsigurnija akcija za djecu</h1>
-          <p class="ws-hero__subheading">
-            Organiziramo nezaboravne Gel Blaster mečeve za ekipe, rođendane i dječje zabave – uz sigurnu opremu i iskusne instruktore.
+    <section id="contact-main" class="ws-section ws-section--light ws-contact">
+      <div class="ws-container ws-contact__inner" style="padding-top: var(--spacing-md);">
+        
+        <!-- Lijeva kolona: Forma -->
+        <div id="booking" class="ws-contact__left">
+          <h1>Pošalji upit za svoj termin</h1>
+          <p class="ws-subheading">
+            Ispuni obrazac i javi nam detalje — odgovaramo brzo i organiziramo sve za tvoju ekipu.
           </p>
-          <div class="ws-hero__actions">
-            <a href="../contact/" class="ws-btn ws-btn--primary">Rezerviraj termin</a>
-            <a href="#offers" class="ws-btn ws-btn--ghost" data-scroll-to="offers">Pogledaj ponudu</a>
-          </div>
-          <ul class="ws-hero__bullets">
-            <li>Teren ~3500 m² sa zaklonima i taktičkim zonama</li>
-            <li>Vrhunska zaštitna oprema i Gel Blaster markeri</li>
-          </ul>
-        </div>
-        <div class="ws-hero__media">
-          <div class="ws-hero__image_gb ws-hero__image--primary">
-            <!-- background-image via CSS -->
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="ws-section ws-section--light ws-about">
-      <div class="ws-container ws-about__inner">
-        <div class="ws-about__media">
-          <div class="ws-ratio ws-ratio--16x9 ws-about__image">
-            <!-- bg image via CSS -->
-          </div>
-        </div>
-        <div class="ws-about__content">
-          <p class="ws-eyebrow">O nama</p>
-          <h2>Taktički teren, profesionalna oprema i dobra ekipa.</h2>
-          <p>
-            Wildshot Paintball Arena nastala je iz čiste ljubavi prema adrenalinu i timskoj igri. Naš teren nudi
-            dinamičan raspored zaklona, različite scenarije igre i opremu koja zadovoljava i početnike i iskusne igrače.
-          </p>
-          <p>
-            Instruktori su uz vas od prvog do zadnjeg hica – objašnjavaju pravila, brinu o sigurnosti i vode scenarije
-            kako bi svaka igra bila napeta i zabavna.
-          </p>
-        </div>
-      </div>
-    </section>
+          <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="ws-form">
+            <input type="hidden" name="access_key" value="f70b4969-3569-4ce5-837e-870d62afe20e" />
+            <input type="hidden" name="subject" value="Novi upit s Warland weba" />
+            <input type="hidden" name="from_name" value="Warland Paintball Web" />
 
-    <!-- OFFERS -->
-    <section id="offers" class="ws-section ws-section--dark ws-offers">
-      <div class="ws-container">
-        <header class="ws-section__header">
-          <h2>Naša ponuda</h2>
-          <p>Odaberi paket koji najbolje odgovara vašoj ekipi.</p>
-        </header>
-
-        <div class="ws-pricing-grid">
-          <article class="ws-pricing-card">
-            <div class="ws-pricing-card__header">
-              <span class="ws-pricing-card__badge">Najbolje za početnike</span>
-              <h3>Gel Blaster Basic</h3>
+            <div class="ws-form__group">
+              <label for="name">Ime i prezime *</label>
+              <input type="text" id="name" name="name" required placeholder="Tvoje ime i prezime" />
             </div>
-            <ul class="ws-pricing-card__features">
-              <li>5 000 kuglica po grupi</li>
-              <li>10–12 igrača</li>
-              <li>Zaštitna oprema (maska, prsluk)</li>
-              <li>Trajanje igre – 2 sata</li>
-            </ul>
 
-            <p class="ws-pricing-card__price-hint">
-              Cijena po osobi – 16 €
-            </p>
-          </article>
-
-          <article class="ws-pricing-card ws-pricing-card--accent">
-            <div class="ws-pricing-card__header">
-              <span class="ws-pricing-card__badge">Najpopularnije</span>
-              <h3>Gel Blaster Advanced</h3>
+            <div class="ws-form__group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required placeholder="tvoja@email.adresa" />
             </div>
-            <ul class="ws-pricing-card__features">
-              <li>7 000 kuglica po grupi</li>
-              <li>13–16 igrača</li>
-              <li>Zaštitna oprema (maska, prsluk)</li>
-              <li>Trajanje igre – 2,5 sata</li>
-            </ul>
 
-            <p class="ws-pricing-card__price-hint">
-              Cijena po osobi – 16 €
-            </p>
-          </article>
-
-          <article class="ws-pricing-card">
-            <div class="ws-pricing-card__header">
-              <span class="ws-pricing-card__badge">Extreme</span>
-              <h3>Gel Blaster Pro</h3>
+            <div class="ws-form__group">
+              <label for="phone">Mobitel </label>
+              <input type="tel" id="phone" name="phone" placeholder="+385..." />
             </div>
-            <ul class="ws-pricing-card__features">
-              <li><strong>Neograničeno</strong> kuglica po grupi</li>
-              <li>8–16 igrača</li>
-              <li>Zaštitna oprema (maska, prsluk)</li>
-              <li>Trajanje igre – 3 sata</li>
-            </ul>
-            
-            <p class="ws-pricing-card__price-hint">
-              Cijena po osobi – 22 €
-            </p>            
-          </article>
+
+            <div class="ws-form__group">
+              <label for="groupSize">Broj igrača *</label>
+              <input type="number" id="groupSize" name="groupSize" min="8" max="16" required placeholder="npr. 10" />
+            </div>
+
+            <div class="ws-form__group">
+              <label for="serviceType">Vrsta igre *</label>
+              <select id="serviceType" name="serviceType" required>
+                <option value="">Odaberi... </option>
+                <option value="Paintball">Paintball</option>
+                <option value="Gel Blaster">Gel Blaster</option>
+                <option value="Kombinacija">Kombinacija</option>
+              </select>
+            </div>
+
+            <div class="ws-form__group">
+              <label for="message">Poruka</label>
+              <textarea id="message" name="message" rows="4" placeholder="Napiši nam povod i posebne želje."></textarea>
+            </div>
+
+            <div class="ws-form__group ws-form__group--checkbox">
+              <label>
+                <input type="checkbox" id="privacyConsent" name="privacyConsent" required />
+                Slažem se s obradom osobnih podataka.
+              </label>
+            </div>
+
+            <button type="submit" class="ws-btn ws-btn--primary">Pošalji upit</button>
+          </form>
         </div>
 
-        <p class="ws-section__note">
-          *Paketi su prilagođeni djeci od 10 do 14 godina uz nadzor instruktora.
-        </p>
-      </div>
-    </section>
-
-    <!-- GALERIJA -->
-    <section id="gallery" class="ws-section ws-section--light ws-gallery">
-      <div class="ws-container">
-        <header class="ws-section__header">
-          <h2>Galerija</h2>
-          <p>Pogledaj atmosferu s našeg terena.</p>
-        </header>
-
-        <div id="gallery-items" class="ws-gallery__grid">
-
-          <!-- 1 -->
-          <div class="ws-gallery__item">
-            <div class="ws-ratio ws-ratio--4x3 ws-gallery__image"
-                 style="background-image: url('../assets/img/IMG_4009.JPG');"></div>
+        <!-- Desna kolona: Sidebar -->
+        <aside class="ws-contact__right">
+          <div class="ws-contact-card">
+            <h2>Kontakt podaci</h2>
+            <p>+385 91 526 3966</p>
+            <p>warlandpaintballsusine@gmail.com</p>
+            <p>Ul. Gorana Potnešila, 31511, Sušine</p>
           </div>
 
-          <!-- 2 -->
-          <div class="ws-gallery__item">
-            <div class="ws-ratio ws-ratio--4x3 ws-gallery__image"
-                 style="background-image: url('../assets/img/IMG_4013.JPG');"></div>
+          <div class="ws-contact-card">
+            <h2>Radno vrijeme</h2>
+            <p>Pon - Ned: 08:00 - 20:00</p>
+            <p>Termini izvan radnog vremena uz dogovor.</p>
           </div>
 
-          <!-- 3 -->
-          <div class="ws-gallery__item">
-            <div class="ws-ratio ws-ratio--4x3 ws-gallery__image"
-                 style="background-image: url('../assets/img/IMG_4017.JPG');"></div>
+          <div class="ws-location-map ws-contact-card">
+            <h2>Lokacija</h2>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11175.011803273292!2d18.0557274!3d45.5552951!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475d6dae3f4d40a9%3A0x5edbe9b5a6feb3f0!2sWarland%20paintball!5e0!3m2!1shr!2shr!4v1765044572486!5m2!1shr!2shr"
+              width="600"
+              height="450"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
           </div>
-
-          <!-- 4 -->
-          <div class="ws-gallery__item">
-            <div class="ws-ratio ws-ratio--4x3 ws-gallery__image"
-                 style="background-image: url('../assets/img/IMG_4018.JPG');"></div>
-          </div>
-
-          <!-- 5 -->
-          <div class="ws-gallery__item">
-            <div class="ws-ratio ws-ratio--4x3 ws-gallery__image"
-                 style="background-image: url('../assets/img/IMG_4020.JPG');"></div>
-          </div>
-
-          <!-- 6 -->
-          <div class="ws-gallery__item">
-            <div class="ws-ratio ws-ratio--4x3 ws-gallery__image"
-                 style="background-image: url('../assets/img/IMG_4023.JPG');"></div>
-          </div>
-
-          <!-- 7 — NOVA FOTKA, RASTEŽE SE PREKO DVA REDA NA DESKTOPU -->
-          <div class="ws-gallery__item ws-gallery__item--tall">
-            <div class="ws-ratio ws-ratio--4x3 ws-gallery__image"
-                 style="background-image: url('../assets/img/IMG_4024.JPG');"></div>
-          </div>
-
-          <!-- 8 -->
-          <div class="ws-gallery__item">
-            <div class="ws-ratio ws-ratio--4x3 ws-gallery__image"
-                 style="background-image: url('../assets/img/IMG_4027.JPG');"></div>
-          </div>
-
-          <!-- 9 — završava u desnom stupcu zadnjeg reda -->
-          <div class="ws-gallery__item">
-            <div class="ws-ratio ws-ratio--4x3 ws-gallery__image"
-                 style="background-image: url('../assets/img/IMG_4053.JPG');"></div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER CTA STRIP -->
-    <section id="home-footer-cta" class="ws-section ws-section--accent ws-footer-cta">
-      <div class="ws-container ws-footer-cta__inner">
-        <div class="ws-footer-cta__text">
-          <h2>Spremni za igru?</h2>
-          <p>Pošalji upit ili nas nazovi.</p>
-        </div>
-        <div class="ws-footer-cta__actions">
-          <a href="../contact/" class="ws-btn ws-btn--dark">Kontakt i rezervacije</a>
-          <a href="tel:+385915263966" class="ws-btn ws-btn--ghost-dark">Nazovi odmah</a>
-        </div>
+        </aside>
       </div>
     </section>
   </main>
@@ -254,8 +149,8 @@
         <h3>Navigacija</h3>
         <ul class="ws-footer__links">
           <li><a href="../paintball/">Paintball</a></li>
-          <li><a href="./">Gel Blaster</a></li>
-          <li><a href="../contact/">Kontakt</a></li>
+          <li><a href="../gel-blaster/">Gel Blaster</a></li>
+          <li><a href="./">Kontakt</a></li>
           <li><a href="../legal/privacy-policy/">Politika privatnosti</a></li>
           <li><a href="../legal/cookie-policy/">Pravila o kolačićima</a></li>
         </ul>
@@ -268,7 +163,7 @@
     </div>
   </footer>
 
-  <!-- Cookie banner -->
+  <!-- Cookie banner (shared behaviour with index) -->
   <div class="ws-cookie-banner" id="cookie-banner" aria-hidden="true">
     <div class="ws-container ws-cookie-banner__inner">
       <p>
@@ -282,7 +177,8 @@
     </div>
   </div>
 
-  <!-- iz gel-blaster/ do assets/js -->
+  <!-- iz /contact/ do /assets/js -->
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/form.js"></script>
 </body>
 </html>

@@ -5,15 +5,13 @@
   <title>Kontakt i rezervacije - Warland Paintball</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Kontakt forma i podaci za rezervaciju paintball i gel blaster termina." />
-  <!-- iz /contact/ do /assets/ -->
-  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
 <body>
 
   <!-- Header / Navigation -->
   <header class="ws-nav ws-nav--sticky">
     <div class="ws-nav__inner">
-      <!-- iz /contact/ do /paintball/ -->
       <a href="../paintball/" class="ws-nav__logo">
         <span class="ws-nav__logo-main">Warland Paintball<span class="ws-nav__logo-dot"></span></span>
       </a>
@@ -25,111 +23,111 @@
       <nav class="ws-nav__menu" aria-label="Glavna navigacija">
         <ul>
           <li><a href="../paintball/">Paintball</a></li>
-          <li><a href="../gel-blaster/">Gel Blaster</a></li>
-          <li><a href="./">Kontakt</a></li>
+          <li><a href="../for-kids/">Za Djecu</a></li>
+          <li><a href="../gel-blast/">Gel Blaster</a></li>
+          <li><a href="../contact/">Kontakt</a></li>
           <li><a href="../faq/">FAQ</a></li>
         </ul>
       </nav>
 
-      <a href="./" class="ws-btn ws-btn--primary ws-nav__cta">
+      <a href="/contact/" class="ws-btn ws-btn--primary ws-nav__cta">
         Rezerviraj termin
       </a>
     </div>
   </header>
 
-  <main>
-    <section id="contact-main" class="ws-section ws-section--light ws-contact">
-      <div class="ws-container ws-contact__inner" style="padding-top: var(--spacing-md);">
-        
-        <!-- Lijeva kolona: Forma -->
-        <div id="booking" class="ws-contact__left">
-          <h1>Pošalji upit za svoj termin</h1>
-          <p class="ws-subheading">
-            Ispuni obrazac i javi nam detalje — odgovaramo brzo i organiziramo sve za tvoju ekipu.
-          </p>
 
-          <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="ws-form">
-            <input type="hidden" name="access_key" value="f70b4969-3569-4ce5-837e-870d62afe20e" />
-            <input type="hidden" name="subject" value="Novi upit s Warland weba" />
-            <input type="hidden" name="from_name" value="Warland Paintball Web" />
+<main>
+  <section id="contact-main" class="ws-section ws-section--light ws-contact">
+    <div class="ws-container ws-contact__inner" style="padding-top: var(--sapcing-md);">
+      
+      <!-- Lijeva kolona: Forma -->
+      <div id="booking" class="ws-contact__left">
+        <h1>Pošalji upit za svoj termin</h1>
+        <p class="ws-subheading">
+          Ispuni obrazac i javi nam detalje — odgovaramo brzo i organiziramo sve za tvoju ekipu.
+        </p>
 
-            <div class="ws-form__group">
-              <label for="name">Ime i prezime *</label>
-              <input type="text" id="name" name="name" required placeholder="Tvoje ime i prezime" />
-            </div>
+        <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="ws-form" >
+          <input type="hidden" name="access_key" value="f70b4969-3569-4ce5-837e-870d62afe20e">
 
-            <div class="ws-form__group">
-              <label for="email">Email *</label>
-              <input type="email" id="email" name="email" required placeholder="tvoja@email.adresa" />
-            </div>
+          <input type="hidden" name="subject" value="Novi upit s Warland weba" />
 
-            <div class="ws-form__group">
-              <label for="phone">Mobitel </label>
-              <input type="tel" id="phone" name="phone" placeholder="+385..." />
-            </div>
+          <input type="hidden" name="from_name" value="Warland Paintball Web" />
 
-            <div class="ws-form__group">
-              <label for="groupSize">Broj igrača *</label>
-              <input type="number" id="groupSize" name="groupSize" min="8" max="16" required placeholder="npr. 10" />
-            </div>
 
-            <div class="ws-form__group">
-              <label for="serviceType">Vrsta igre *</label>
-              <select id="serviceType" name="serviceType" required>
-                <option value="">Odaberi... </option>
-                <option value="Paintball">Paintball</option>
-                <option value="Gel Blaster">Gel Blaster</option>
-                <option value="Kombinacija">Kombinacija</option>
-              </select>
-            </div>
+          <div class="ws-form__group">
+            <label for="name">Ime i prezime *</label>
+            <input type="text" id="name" name="name" required placeholder="Tvoje ime i prezime" />
+          </div>
 
-            <div class="ws-form__group">
-              <label for="message">Poruka</label>
-              <textarea id="message" name="message" rows="4" placeholder="Napiši nam povod i posebne želje."></textarea>
-            </div>
+          <div class="ws-form__group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required placeholder="tvoja@email.adresa" />
+          </div>
 
-            <div class="ws-form__group ws-form__group--checkbox">
-              <label>
-                <input type="checkbox" id="privacyConsent" name="privacyConsent" required />
-                Slažem se s obradom osobnih podataka.
-              </label>
-            </div>
+          <div class="ws-form__group">
+            <label for="phone">Mobitel </label>
+            <input type="tel" id="phone" name="phone"  placeholder="+385..." />
+          </div>
 
-            <button type="submit" class="ws-btn ws-btn--primary">Pošalji upit</button>
-          </form>
+          <div class="ws-form__group">
+            <label for="groupSize">Broj igrača *</label>
+            <input type="number" id="groupSize" name="groupSize" min="8" max="16" required placeholder="npr. 10" />
+          </div>
+
+          <div class="ws-form__group">
+            <label for="serviceType">Vrsta igre *</label>
+            <select id="serviceType" name="serviceType" required>
+              <option value="">Odaberi... </option>
+              <option value="Paintball">Paintball</option>
+              <option value="Gel Blaster">Gel Blaster</option>
+              <option value="Kombinacija">Kombinacija</option>
+            </select>
+          </div>
+
+          <div class="ws-form__group">
+            <label for="message">Poruka</label>
+            <textarea id="message" name="message" rows="4" placeholder="Napiši nam povod i posebne želje."></textarea>
+          </div>
+
+          <div class="ws-form__group ws-form__group--checkbox">
+            <label>
+              <input type="checkbox" id="privacyConsent" name="privacyConsent" required />
+              Slažem se s obradom osobnih podataka.
+            </label>
+          </div>
+
+          <button type="submit" class="ws-btn ws-btn--primary">Pošalji upit</button>
+        </form>
+      </div>
+
+      <!-- Desna kolona: Sidebar -->
+      <aside class="ws-contact__right">
+        <div class="ws-contact-card">
+          <h2>Kontakt podaci</h2>
+          <p> +385 91 526 3966</p>
+          <p> warlandpaintballsusine@gmail.com</p>
+          <p> Ul. Gorana Potnešila, 31511, Sušine</p>
         </div>
 
-        <!-- Desna kolona: Sidebar -->
-        <aside class="ws-contact__right">
-          <div class="ws-contact-card">
-            <h2>Kontakt podaci</h2>
-            <p>+385 91 526 3966</p>
-            <p>warlandpaintballsusine@gmail.com</p>
-            <p>Ul. Gorana Potnešila, 31511, Sušine</p>
-          </div>
+        <div class="ws-contact-card">
+          <h2>Radno vrijeme</h2>
+          <p>Pon - Ned: 00:00 - 24:00</p>
+        </div>
 
-          <div class="ws-contact-card">
-            <h2>Radno vrijeme</h2>
-            <p>Pon - Ned: 08:00 - 20:00</p>
-            <p>Termini izvan radnog vremena uz dogovor.</p>
-          </div>
+        <div class="ws-location-map ws-contact-card">
+          <h2>Lokacija</h2>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11175.011803273292!2d18.0557274!3d45.5552951!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475d6dae3f4d40a9%3A0x5edbe9b5a6feb3f0!2sWarland%20paintball!5e0!3m2!1shr!2shr!4v1765044572486!5m2!1shr!2shr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">  
+          </iframe>
+        </div>
 
-          <div class="ws-location-map ws-contact-card">
-            <h2>Lokacija</h2>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11175.011803273292!2d18.0557274!3d45.5552951!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475d6dae3f4d40a9%3A0x5edbe9b5a6feb3f0!2sWarland%20paintball!5e0!3m2!1shr!2shr!4v1765044572486!5m2!1shr!2shr"
-              width="600"
-              height="450"
-              style="border:0;"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-          </div>
-        </aside>
-      </div>
-    </section>
-  </main>
+
+      </aside>
+    </div>
+  </section>
+</main>
+
 
   <!-- Footer -->
   <footer class="ws-footer">
@@ -149,8 +147,9 @@
         <h3>Navigacija</h3>
         <ul class="ws-footer__links">
           <li><a href="../paintball/">Paintball</a></li>
+          <li><a href="../for-kids/">Paintball</a></li>
           <li><a href="../gel-blaster/">Gel Blaster</a></li>
-          <li><a href="./">Kontakt</a></li>
+          <li><a href="../contact/">Kontakt</a></li>
           <li><a href="../legal/privacy-policy/">Politika privatnosti</a></li>
           <li><a href="../legal/cookie-policy/">Pravila o kolačićima</a></li>
         </ul>
@@ -177,7 +176,6 @@
     </div>
   </div>
 
-  <!-- iz /contact/ do /assets/js -->
   <script src="../assets/js/main.js"></script>
   <script src="../assets/js/form.js"></script>
 </body>

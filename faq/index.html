@@ -5,8 +5,8 @@
   <title>FAQ - Warland Paintball</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Česta pitanja i odgovori o Wildshot Paintball Areni." />
-  <link rel="stylesheet" href="../assets/css/styles.css" />
-  <link rel="stylesheet" href="../assets/css/faq.css" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/faq.css" />
 </head>
 <body>
 
@@ -24,18 +24,18 @@
       <nav class="ws-nav__menu" aria-label="Glavna navigacija">
         <ul>
           <li><a href="../paintball/">Paintball</a></li>
-          <li><a href="../gel-blaster/">Gel Blaster</a></li>
+          <li><a href="../for-kids/">Za Djecu</a></li>
+          <li><a href="../gel-blast/">Gel Blaster</a></li>
           <li><a href="../contact/">Kontakt</a></li>
           <li><a href="../faq/">FAQ</a></li>
         </ul>
       </nav>
 
-      <a href="../contact/" class="ws-btn ws-btn--primary ws-nav__cta">
+      <a href="/contact/" class="ws-btn ws-btn--primary ws-nav__cta">
         Rezerviraj termin
       </a>
     </div>
   </header>
-
 
 
   <main>
@@ -101,6 +101,7 @@
         <h3>Navigacija</h3>
         <ul class="ws-footer__links">
           <li><a href="../paintball/">Paintball</a></li>
+          <li><a href="../for-kids/">Paintball</a></li>
           <li><a href="../gel-blaster/">Gel Blaster</a></li>
           <li><a href="../contact/">Kontakt</a></li>
           <li><a href="../legal/privacy-policy/">Politika privatnosti</a></li>
@@ -115,7 +116,21 @@
     </div>
   </footer>
 
-  <script src="../assets/js/faq.js"></script>
+  <!-- Cookie banner (shared behaviour with index) -->
+  <div class="ws-cookie-banner" id="cookie-banner" aria-hidden="true">
+    <div class="ws-container ws-cookie-banner__inner">
+      <p>
+        Koristimo kolačiće za poboljšanje korisničkog iskustva. Nastavkom korištenja stranice slažeš se s uporabom
+        kolačića.
+      </p>
+      <div class="ws-cookie-banner__actions">
+        <button class="ws-btn ws-btn--primary" id="cookie-accept">Prihvati</button>
+        <button class="ws-btn ws-btn--ghost" id="cookie-decline">Odbij</button>
+      </div>
+    </div>
+  </div>
+
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/form.js"></script>
 </body>
 </html>
